@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-main: #1862b9;
+    --color-bg: #f1f6fb;
+    --color-font-main: #05213f;
+    --color-font-other: #697b8b;
+    --color-category: #b4c2d6;
+    --bordered-md: 10px;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    min-width: 320px;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+
+    width: 100%;
+    min-height: 100vh;
+
+    &-content {
+        background-color: var(--color-bg);
+    }
+}
