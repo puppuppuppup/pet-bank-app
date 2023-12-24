@@ -76,12 +76,7 @@ const SideBar = () => {
                     {categories.main.length &&
                         categories.main.map((category, i) => {
                             return (
-                                <CategoryItem
-                                    key={i}
-                                    link={category.link}
-                                    name={category.name}
-                                    active={currentBankPage.current === category.link}
-                                />
+                                <CategoryItem key={i} link={category.link} name={category.name} />
                             );
                         })}
                 </div>
@@ -89,12 +84,7 @@ const SideBar = () => {
                     {categories.other.length &&
                         categories.other.map((category, i) => {
                             return (
-                                <CategoryItem
-                                    key={i}
-                                    link={category.link}
-                                    name={category.name}
-                                    active={currentBankPage.current === category.link}
-                                />
+                                <CategoryItem key={i} link={category.link} name={category.name} />
                             );
                         })}
                 </div>

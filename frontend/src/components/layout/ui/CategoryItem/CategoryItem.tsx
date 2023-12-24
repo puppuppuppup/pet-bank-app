@@ -9,7 +9,6 @@ import Link from 'next/link';
 type Props = {
     name: string;
     link: BankPageType;
-    active: boolean;
 };
 
 const CategoryItem = (props: Props) => {
@@ -22,16 +21,14 @@ const CategoryItem = (props: Props) => {
     };
 
     useEffect(() => {
-        if (currentBankPage.current === props.link) {
-            changePage({ prev: currentBankPage.current, current: currentBankPage.current });
-        }
+        changePage({ prev: currentBankPage.current, current: currentBankPage.current });
     }, []);
 
     return (
         <Link
             type='button'
             className={`${styles.item} ${
-                currentBankPage.prev === props.link ? styles.active : ''
+                currentBankPage.current === props.link ? styles.active : ''
             } flex align-center width-min bg-no-repeat`}
             style={{ backgroundImage: `url(/svg/categories/${props.link}.svg)` }}
             href={props.link}

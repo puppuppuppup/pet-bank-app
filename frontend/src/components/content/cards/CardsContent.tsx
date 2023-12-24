@@ -1,8 +1,6 @@
 import React from 'react';
 
-type Props = {};
-
-const CardsContent = (props: Props) => {
+const CardsContent = () => {
     return <div className='page-content'>CardsContent</div>;
 };
 
