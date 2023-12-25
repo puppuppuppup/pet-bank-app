@@ -1,7 +1,7 @@
 import { useTypedSelector } from './useTypedSelector';
 
-export const useCurrentBankPage = () => {
-    const currentBankPage = useTypedSelector(state => state.bankPageOpened);
+export const useBankPageOpened = () => {
+    const bankPageOpened = useTypedSelector(state => state.bankPageOpenedReducer);
 
-    return currentBankPage;
+    return bankPageOpened;
 };

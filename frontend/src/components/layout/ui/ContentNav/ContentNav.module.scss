@@ -1,0 +1,8 @@
+.ContentNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+}

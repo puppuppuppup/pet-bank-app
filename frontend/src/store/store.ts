@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { reducer as bankPageOpened } from './currentBankPage/bankPageOpened';
+import { reducer as bankPageOpenedReducer } from './bankPageOpened/bankPageOpened.slice';
+import { reducer as pageSearchReducer } from './pageSearch/pageSearch.slice';
 
 const reducer = combineReducers({
-    bankPageOpened,
+    bankPageOpenedReducer,
+    pageSearchReducer,
 });
 
 export const store = configureStore({

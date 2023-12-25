@@ -4,11 +4,18 @@
 
 :root {
     --color-main: #1862b9;
-    --color-bg: #f1f6fb;
+    --color-bg: #f9f9f9;
     --color-font-main: #05213f;
     --color-font-other: #697b8b;
     --color-category: #b4c2d6;
+    --color-hover: #f0f0f0;
+    --color-hover-darker: #bfbfbf;
     --bordered-md: 10px;
+    --shadow-base: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+    background: var(--color-hover-darker);
 }
 
 html {
@@ -28,6 +35,20 @@ body {
     box-sizing: inherit;
 }
 
+input,
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+        border: none
+    }
+}
+
 .page {
     display: grid;
     grid-template-columns: 230px 1fr;
@@ -36,6 +57,10 @@ body {
     min-height: 100vh;
 
     &-content {
-        background-color: var(--color-bg);
+
+        &-wrapper {
+            padding: 1rem;
+            background-color: var(--color-bg);
+        }
     }
 }

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import styles from './CategoryItem.module.scss';
 import { useActions } from '@/hooks/useActions';
 import { BankPageType } from '@/utils/types/types.store';
-import { useCurrentBankPage } from '@/hooks/useBankPageOpened';
+import { useBankPageOpened } from '@/hooks/useBankPageOpened';
 import Link from 'next/link';
 
 type Props = {
@@ -13,22 +13,22 @@ type Props = {
 
 const CategoryItem = (props: Props) => {
     const { changePage } = useActions();
-    const currentBankPage = useCurrentBankPage();
+    const bankPageOpened = useBankPageOpened();
 
     const handleClick = () => {
-        if (currentBankPage.current === props.link) return;
-        changePage({ prev: currentBankPage.current, current: props.link });
+        if (bankPageOpened.current === props.link) return;
+        changePage({ prev: bankPageOpened.current, current: props.link });
     };
 
     useEffect(() => {
-        changePage({ prev: currentBankPage.current, current: currentBankPage.current });
+        changePage({ prev: bankPageOpened.current, current: bankPageOpened.current });
     }, []);
 
     return (
         <Link
             type='button'
             className={`${styles.item} ${
-                currentBankPage.current === props.link ? styles.active : ''
+                bankPageOpened.current === props.link ? styles.active : ''
             } flex align-center width-min bg-no-repeat`}
             style={{ backgroundImage: `url(/svg/categories/${props.link}.svg)` }}
             href={props.link}

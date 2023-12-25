@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import styles from './SideBar.module.scss';
 import CategoryItem from '@/components/layout/ui/CategoryItem/CategoryItem';
 import Link from 'next/link';
-import { useCurrentBankPage } from '@/hooks/useBankPageOpened';
+import { useBankPageOpened } from '@/hooks/useBankPageOpened';
 import { BankPageType } from '@/utils/types/types.store';
 import { useActions } from '@/hooks/useActions';
 
@@ -45,11 +45,11 @@ const SideBar = () => {
         };
     }, []);
 
-    const currentBankPage = useCurrentBankPage();
+    const bankPageOpened = useBankPageOpened();
     const { changePage } = useActions();
 
     const handleClickLogo = () => {
-        changePage({ prev: currentBankPage.prev, current: 'home' });
+        changePage({ prev: bankPageOpened.prev, current: 'home' });
     };
 
     return (
