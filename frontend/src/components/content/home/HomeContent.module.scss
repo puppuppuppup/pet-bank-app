@@ -4,6 +4,8 @@
     align-items: flex-start;
 
     &_heading {
+        margin-bottom: 1rem;
+
         font-size: var(--font-heading);
         font-weight: 700;
     }
@@ -11,8 +13,8 @@
     &_main {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: repeat(2, 200px);
+        grid-template-columns: 1fr 2.5fr;
+        grid-template-rows: repeat(2, auto);
         gap: 20px;
     }
 }

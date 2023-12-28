@@ -1,8 +1,83 @@
 .card {
+    --indent-x: 1.5rem;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-items: flex-start;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3 / 2;
     border-radius: var(--bordered-lg);
-    background-color: #7373c6;
-    padding: 10px;
-    color: var(--color-font-light);
+    border: 2px solid var(--color-semi-black);
+    background-color: var(--color-card);
+    padding: 23% var(--indent-x) 10px;
+    color: var(--color-font-semi);
+    box-shadow: var(--shadow-larger-darker);
+
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) calc(100% - 20px);
+    background-size: 18%;
+    background-blend-mode: luminosity;
+    letter-spacing: 0.03rem;
+
+    overflow: hidden;
+
+    &>p {
+        transition: opacity .2s ease-in-out;
+    }
+
+    &_type {
+        position: absolute;
+        top: .7rem;
+        left: .7rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    &_balance {
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1;
+
+        font-weight: 500;
+
+        &_money {
+            font-size: 1.4rem;
+            margin-right: 5px;
+        }
+
+        &_currency {
+            font-size: 0.8rem;
+            letter-spacing: normal;
+        }
+    }
+
+    &_number {
+        font-weight: 700;
+    }
+
+    &_expire {
+        position: absolute;
+        left: var(--indent-x);
+        bottom: 18px;
+
+        font-size: .9rem;
+    }
+
+    &_payment {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: inherit;
+        filter: grayscale(1) blur(0px);
+        opacity: 0.1;
+        background-position: 100% 102%;
+        background-repeat: no-repeat;
+
+        transition: opacity .2s ease-in-out;
+    }
 }

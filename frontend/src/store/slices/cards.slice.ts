@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { PayloadAction } from '@reduxjs/toolkit';
 
-interface CardsState {
+export interface CardsState {
     type: 'debit' | 'credit';
     number: string;
     balance: number;
@@ -10,7 +10,7 @@ interface CardsState {
         month: string;
         year: string;
     };
-    bank: 'visa' | 'mastercard';
+    payment: 'visa' | 'mastercard';
 }
 
 const initialState: CardsState[] = [
@@ -23,7 +23,18 @@ const initialState: CardsState[] = [
             month: '09',
             year: '2023',
         },
-        bank: 'visa',
+        payment: 'mastercard',
+    },
+    {
+        type: 'credit',
+        number: '5555555555555555',
+        balance: 101296,
+        currency: 'USD',
+        expire: {
+            month: '08',
+            year: '2025',
+        },
+        payment: 'visa',
     },
 ];
 
