@@ -1,0 +1,35 @@
+.profile {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &_name {
+        display: inline-block;
+        min-width: max-content;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    &_arrow {
+        width: 11px;
+        aspect-ratio: 1;
+
+        transform: translateX(-2px);
+
+        transition: transform .15s ease-in-out;
+    }
+
+    &_photo {
+        width: 37px;
+        aspect-ratio: 1;
+        border-radius: var(--bordered-md);
+        border: 1px solid var(--color-semi-black);
+        box-shadow: var(--shadow-base);
+    }
+
+    &:hover {
+        .profile_arrow {
+            transform: translate(-2px, 2px);
+        }
+    }
+}

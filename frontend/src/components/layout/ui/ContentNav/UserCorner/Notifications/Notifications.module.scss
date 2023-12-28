@@ -1,0 +1,22 @@
+.notifications {
+    position: relative;
+
+    &_bell {
+        width: 21px;
+        aspect-ratio: 1;
+    }
+
+    &.unread {
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 5px;
+            aspect-ratio: 1;
+            background-color: rgb(255, 65, 65);
+            border-radius: 50%;
+        }
+    }
+
+}

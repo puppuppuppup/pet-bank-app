@@ -5,13 +5,20 @@
 :root {
     --color-main: #1862b9;
     --color-bg: #f9f9f9;
-    --color-font-main: #05213f;
-    --color-font-other: #697b8b;
+    --color-font-main: #343434;
+    --color-font-light: #f8f8f8;
+    --color-semi-black: #dedede;
     --color-category: #b4c2d6;
     --color-hover: #f0f0f0;
     --color-hover-darker: #bfbfbf;
+
     --bordered-md: 10px;
-    --shadow-base: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --bordered-lg: 15px;
+
+    --shadow-base: 0 10px 10px -5px rgba(0, 0, 0, 0.15);
+
+    --font-heading: 1.5rem;
+    --font-sub-heading: 1.3rem;
 }
 
 ::selection {
@@ -25,6 +32,7 @@ html {
 
 body {
     min-width: 320px;
+    color: var(--color-font-main)
 }
 
 *,
@@ -42,11 +50,6 @@ button {
     background-color: transparent;
 
     font-family: inherit;
-
-    &:focus {
-        outline: none;
-        border: none
-    }
 }
 
 .page {
@@ -57,10 +60,24 @@ button {
     min-height: 100vh;
 
     &-content {
+        animation: show 0.4s linear forwards;
 
         &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
             padding: 1rem;
             background-color: var(--color-bg);
         }
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

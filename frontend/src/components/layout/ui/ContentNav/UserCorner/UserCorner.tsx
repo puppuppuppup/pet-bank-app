@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './UserCorner.module.scss';
+import Notifications from './Notifications/Notifications';
+import Profile from './Profile/Profile';
 
-type Props = {};
-
-const UserCorner = (props: Props) => {
-    return <div className={styles.UserCorner}>UserCorner</div>;
+const UserCorner = () => {
+    return (
+        <div className={styles.UserCorner}>
+            <Notifications />
+            <Profile />
+        </div>
+    );
 };
 
 export default UserCorner;

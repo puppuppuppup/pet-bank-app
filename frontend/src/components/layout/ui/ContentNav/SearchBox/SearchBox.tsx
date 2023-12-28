@@ -14,7 +14,7 @@ const SearchBox = () => {
     return (
         <form className={styles.SearchBox}>
             <input
-                placeholder='How to not spend money...'
+                placeholder='How to save money...'
                 type='text'
                 value={pageSearch}
                 onChange={typeHandler}

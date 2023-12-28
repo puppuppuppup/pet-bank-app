@@ -5,12 +5,10 @@
 
     width: 100%;
 
-
     background-color: #fff;
     border-radius: var(--bordered-md);
 
     box-shadow: var(--shadow-base);
-
 }
 
 .SearchBtn,
@@ -21,9 +19,23 @@
 .SearchInput {
     width: 100%;
 
+    border-radius: var(--bordered-md) 0 0 var(--bordered-md);
+
+    outline: 1px solid transparent;
+    transition: outline-color .15s ease-in-out;
+
     &::placeholder {
         font-size: 0.85rem;
-        font-weight: 600;
+        font-weight: 500;
+    }
+
+    &:hover,
+    &:focus {
+        outline-color: var(--color-semi-black);
+    }
+
+    &:active {
+        outline-color: rgba($color: #7b7b7b, $alpha: 1);
     }
 }
 
