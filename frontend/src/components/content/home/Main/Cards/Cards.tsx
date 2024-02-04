@@ -32,36 +32,40 @@ const Cards = () => {
     return (
         <div className={`${styles.cards} ${isChanging ? styles.changing : ''}`}>
             <Card card={cards[currentCardIndex]} />
-            <button className={styles.cards_btn} onClick={() => handleChanging(true)}>
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    strokeWidth={1.5}
-                    stroke='currentColor'
-                >
-                    <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='m8.25 4.5 7.5 7.5-7.5 7.5'
-                    />
-                </svg>
-            </button>
-            <button className={styles.cards_btn} onClick={() => handleChanging(false)}>
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    strokeWidth={1.5}
-                    stroke='currentColor'
-                >
-                    <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='m8.25 4.5 7.5 7.5-7.5 7.5'
-                    />
-                </svg>
-            </button>
+            {cards.length > 1 && (
+                <>
+                    <button className={styles.cards_btn} onClick={() => handleChanging(true)}>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            strokeWidth={1.5}
+                            stroke='currentColor'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='m8.25 4.5 7.5 7.5-7.5 7.5'
+                            />
+                        </svg>
+                    </button>
+                    <button className={styles.cards_btn} onClick={() => handleChanging(false)}>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            strokeWidth={1.5}
+                            stroke='currentColor'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='m8.25 4.5 7.5 7.5-7.5 7.5'
+                            />
+                        </svg>
+                    </button>
+                </>
+            )}
         </div>
     );
 };

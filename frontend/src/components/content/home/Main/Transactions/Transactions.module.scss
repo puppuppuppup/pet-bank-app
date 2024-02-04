@@ -4,8 +4,15 @@
 
     border-radius: var(--bordered-lg);
 
-    padding: 10px;
+    padding: 1.5rem 2rem;
 
-    color: var(--color-font-light);
-    background-color: #7373c6;
+    color: var(--color-font-main);
+    background-color: #fff;
+
+    box-shadow: var(--shadow-larger-darker);
+
+    &_title {
+        font-size: var(--font-sub-heading);
+        font-weight: 500;
+    }
 }
