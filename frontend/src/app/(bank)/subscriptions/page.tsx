@@ -1,4 +1,4 @@
-import SubscriptionsContent from '@/components/content/subscriptions/SubscriptionsContent';
+import SubscriptionsContent from '@/components/layout/subscriptions/SubscriptionsContent';
 import React from 'react';
 
 const SubscriptionsPage = () => {

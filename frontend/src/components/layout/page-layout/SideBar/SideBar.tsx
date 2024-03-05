@@ -2,10 +2,10 @@
 
 import React, { useMemo } from 'react';
 import styles from './SideBar.module.scss';
-import CategoryItem from '@/components/layout/ui/CategoryItem/CategoryItem';
+import CategoryItem from '@/components/layout/page-layout/CategoryItem/CategoryItem';
 import Link from 'next/link';
 import { useBankPageOpened } from '@/hooks/useBankPageOpened';
-import { BankPageType } from '@/utils/types/types.store';
+import { BankPageType } from '@/types/store.types';
 import { useActions } from '@/hooks/useActions';
 
 const SideBar = () => {

@@ -1,4 +1,4 @@
-import { useCards } from '@/hooks/useCards';
+import { useCards } from '../../../../hooks/useCards';
 import React, { useState } from 'react';
 import Card from './Card/Card';
 import styles from './Cards.module.scss';

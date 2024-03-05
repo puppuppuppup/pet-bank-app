@@ -1,4 +1,4 @@
-import { IBankPages } from '@/utils/types/types.store';
+import { IBankPages } from '@/types/store.types';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const initialState: IBankPages = {

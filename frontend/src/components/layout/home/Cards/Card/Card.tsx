@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Card.module.scss';
-import { CardsState } from '@/store/slices/cards.slice';
+import { CardsState } from '../../../../../store/slices/cards.slice';
 
 type Props = {
     card: CardsState;

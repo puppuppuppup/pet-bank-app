@@ -1,7 +1,7 @@
 'use client';
 import { FC, PropsWithChildren } from 'react';
-import SideBar from './SideBar/SideBar';
-import ContentNav from './ui/ContentNav/ContentNav';
+import SideBar from '@/components/layout/page-layout/SideBar/SideBar';
+import ContentNav from '@/components/layout/page-layout/ContentNav/ContentNav';
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (

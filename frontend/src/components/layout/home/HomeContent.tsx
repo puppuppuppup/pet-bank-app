@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import styles from './HomeContent.module.scss';
-import Cards from './Main/Cards/Cards';
-import Transactions from './Main/Transactions/Transactions';
+import Cards from '@/components/layout/home/Cards/Cards';
+import Transactions from '@/components/layout/home/Transactions/Transactions';
 
 const HomeContent = () => {
     return (

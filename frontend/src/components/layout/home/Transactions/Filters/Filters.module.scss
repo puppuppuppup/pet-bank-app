@@ -1,0 +1,43 @@
+.filters {
+    display: grid;
+    width: 100%;
+    gap: 0.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filter_select {
+    width: 100%;
+    height: 100%;
+
+    div[class*="control"] {
+        cursor: pointer;
+        border-radius: 10px;
+    }
+}
+
+.date_picker_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+        padding: 0.5em;
+        border-radius: var(--bordered-md);
+        border: 1px solid var(--color-hover-darker);
+    }
+}
+
+.day_picker {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+
+    &.opened {
+        pointer-events: all;
+        opacity: 1;
+    }
+}

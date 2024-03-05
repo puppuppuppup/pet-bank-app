@@ -1,4 +1,4 @@
-import CardsContent from '@/components/content/cards/CardsContent';
+import CardsContent from '@/components/layout/cards/CardsContent';
 import React from 'react';
 
 const CardsPage = () => {

@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import styles from './CategoryItem.module.scss';
 import { useActions } from '@/hooks/useActions';
-import { BankPageType } from '@/utils/types/types.store';
+import { BankPageType } from '@/types/store.types';
 import { useBankPageOpened } from '@/hooks/useBankPageOpened';
 import Link from 'next/link';
 

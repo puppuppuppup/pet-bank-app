@@ -29,13 +29,16 @@
         font-weight: 500;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
         outline-color: var(--color-semi-black);
     }
 
     &:active {
-        outline-color: rgba($color: #7b7b7b, $alpha: 1);
+        outline-color: #7b7b7b;
+    }
+
+    &:focus {
+        outline-color: var(--color-semi-black);
     }
 }
 
