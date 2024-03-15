@@ -2,7 +2,7 @@
 
 import React, { useMemo } from 'react';
 import styles from './SideBar.module.scss';
-import CategoryItem from '@/components/layout/page-layout/CategoryItem/CategoryItem';
+import CategoryItem from '@/components/ui/CategoryItem/CategoryItem';
 import Link from 'next/link';
 import { useBankPageOpened } from '@/hooks/useBankPageOpened';
 import { BankPageType } from '@/types/store.types';

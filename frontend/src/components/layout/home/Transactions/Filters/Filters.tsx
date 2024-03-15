@@ -3,7 +3,7 @@ import Select, { SingleValue } from 'react-select';
 import { DateRange, DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 import styles from './Filters.module.scss';
-import './DatePicker.scss';
+import './DayPicker.scss';
 
 interface Option {
     value: string;
@@ -58,7 +58,7 @@ const Filters = () => {
                 defaultValue={selectedSortOption}
                 options={sortOptions}
                 onChange={handleSortChange}
-                className={styles.filter_select}
+                className={`${styles.filter_select} input`}
                 instanceId={useId()}
                 placeholder={'Select Sort Type...'}
             />
@@ -66,7 +66,7 @@ const Filters = () => {
                 defaultValue={selectedCardOption}
                 options={cardOptions}
                 onChange={handleCardChange}
-                className={styles.filter_select}
+                className={`${styles.filter_select} input`}
                 instanceId={useId()}
                 placeholder={'Select Card Type...'}
             />
@@ -78,10 +78,9 @@ const Filters = () => {
                             : ''
                     }${selectedDate && selectedDate.to ? format(selectedDate.to, 'PP') : ''}`}
                     onChange={() => {}}
-                    className={styles.filter_select}
+                    className={`${styles.filter_select} input`}
                     placeholder={'Select Date...'}
-                    onFocus={() => setIsDayPickerOpened(true)}
-                    onBlur={() => setIsDayPickerOpened(false)}
+                    onClick={() => setIsDayPickerOpened(prev => !prev)}
                 />
                 <DayPicker
                     mode='range'

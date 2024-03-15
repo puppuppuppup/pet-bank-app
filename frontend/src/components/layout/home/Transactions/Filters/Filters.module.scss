@@ -9,9 +9,55 @@
     width: 100%;
     height: 100%;
 
-    div[class*="control"] {
-        cursor: pointer;
-        border-radius: 10px;
+    outline: none;
+
+    svg {
+        transition: transform .2s ease-in-out;
+    }
+
+    div[class*="css"] {
+        cursor: inherit;
+        padding: 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    &:has(div[class*="menu"]) {
+        border-color: var(--color-font-main);
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    div[class*="menu"] {
+        border-radius: 8px;
+        top: 110%;
+        left: 0;
+        overflow: hidden;
+        border: 1px solid var(--color-font-semi);
+
+        div[class*="option"] {
+            padding: 0.3em 0.5em;
+        }
+
+        div[aria-selected="true"] {
+            background-color: var(--color-hover);
+            color: var(--color-font-main)
+        }
+
+        div[aria-selected="false"] {
+            background-color: white;
+        }
+    }
+
+    span[class*="css"] {
+        display: none;
+    }
+
+    svg {
+        fill: var(--color-font-main);
     }
 }
 
@@ -19,22 +65,20 @@
     position: relative;
     display: flex;
     align-items: center;
-
-    input {
-        padding: 0.5em;
-        border-radius: var(--bordered-md);
-        border: 1px solid var(--color-hover-darker);
-    }
 }
 
 .day_picker {
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 0;
     width: 100%;
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s ease-in-out;
+
+    table {
+        width: 100%;
+    }
 
     &.opened {
         pointer-events: all;
